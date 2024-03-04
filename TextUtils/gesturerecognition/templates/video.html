@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   
+    <title>Video Gallery</title>
+    <style>
+        
+        body {
+        background-color: rgb(5, 152, 144);
+        color: aliceblue;
+        text-align: center;
+        }
+        nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        }
+        nav .Home-link {
+        background-color: darkblue; /* Dark blue background color for Home link */
+        color: rgb(37, 36, 36); /* Text color for Home link */
+        }
+        nav a {
+        text-decoration: none;
+        color: #c3e9ea;
+        margin: 0 10px;
+        font-size: 18px;
+        }
+        nav a:hover {
+        text-decoration: none;
+        color: #ff4d00; /* You can change the color */
+        }
+        .topic h1 {
+        color: white;
+        font-size: 50px;
+        font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px; /* Add bottom margin for separation */
+        }
+
+        video {
+            width: 500px;
+            height: 300px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <header>
+        <nav class="nav" style="color: white;">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+            <span class="separator">|</span>
+            <a class="nav-link" href="/start/">Start</a>
+            <span class="separator">|</span>
+            <a class="nav-link" href="/video/">video-gallery</a>
+        </nav>
+        
+</header>
+    
+<!-- Video 1 -->
+<div class="videos">
+
+    <video controls>
+        <source src="aausadi.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Video 2 -->
+    <video controls>
+        <source src="aausadi.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <video controls src="aausadi.mp4" type="video/mp4">
+
+    </video controls>
+    <video controls src="aausadi.mp4" type="video/mp4">
+
+    </video controls>
+    <video controls src="aausadi.mp4" type="video/mp4">
+
+    </video controls>
+</div>
+
+<!-- Repeat the pattern for the remaining videos (Video 3 to Video 32) -->
+
+</body>
+</html>

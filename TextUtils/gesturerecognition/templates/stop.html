@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Signal Recognition</title>
+
+</head>
+<body>
+    <style>
+
+        body {
+        background-color: rgb(12, 14, 13);
+        color: aliceblue;
+        text-align: center;
+        }
+        nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        }
+        nav .Home-link {
+        background-color: darkblue; /* Dark blue background color for Home link */
+        color: rgb(37, 36, 36); /* Text color for Home link */
+        }
+        nav a {
+        text-decoration: none;
+        color: #c3e9ea;
+        margin: 0 10px;
+        font-size: 18px;
+        }
+        nav a:hover {
+        text-decoration: none;
+        color: #ff4d00; /* You can change the color */
+        }
+        .topic h1 {
+        color: white;
+        font-size: 50px;
+        font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px; /* Add bottom margin for separation */
+        }
+        footer {
+        width: 100%;
+        position: relative;
+        top: 305px;
+        background-color: rgb(23, 21, 21);
+        font-size: 20px;
+        }
+
+    </style>
+
+<header>
+    <nav class="nav" style="color: white;">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <span class="separator">|</span>
+        <a class="nav-link" href="/start/">Start</a>
+        <span class="separator">|</span>
+        <a class="nav-link" href="/video/">Video-gallery</a>
+    </nav>
+
+</header>
+
+
+    <section>
+        <div class="video-container" id="videoContainer">
+            <video id="cameraFeed" autoplay playsinline></video>
+        </div>
+    </section>
+    <!-- <button class="start-button" onclick="toggleCamera()">Start Recognition</button> -->
+    <img src="{% url 'video' %}" -->
+    <form method="post" action="{% url 'start' %}">
+        {% csrf_token %}
+        <button type="submit">stop</button>
+    </form>
+    <h3 id="predictionText">Prediction: <span id="userInput"></span></h3>
+
+    <section>
+        <h2>Instructions:</h2>
+        <p class="instructions">Hold your hand in front of the camera to recognize hand signals.</p>
+    </section>
+
+    <footer>
+        &copy; 2024 Your Hand Gesture Recognition App. All rights reserved.
+    </footer>
+</body>
+</html>
